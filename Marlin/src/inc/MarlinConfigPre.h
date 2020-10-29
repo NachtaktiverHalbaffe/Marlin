@@ -57,6 +57,10 @@
 
 #include "Conditionals_adv.h"
 
+#if USE_MARLINSERIAL
+  #define HardwareSerial_h // trick to disable the standard HWserial
+#endif
+
 #ifndef __MARLIN_DEPS__
   #include HAL_PATH(../HAL, inc/Conditionals_adv.h)
 #endif
